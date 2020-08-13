@@ -1,0 +1,72 @@
+{
+  "name": "@automattic/react-gin",
+  "version": "1.0.0",
+  "description": "Official React bindings for @automattic/gin",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "NODE_ENV=production npx parcel build src/index.ts --target node --no-content-hash --no-source-maps --no-autoinstall && npx tsc -p ./tsconfig.json",
+    "dev": "npx parcel watch src/index.ts --target node",
+    "declarations": "NODE_ENV=production npx tsc -p ./tsconfig.json",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-coverage": "jest --coverage",
+    "see-coverage": "open coverage/lcov-report/index.html"
+  },
+  "keywords": [],
+  "author": "Automattic Inc.",
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {
+    "gin": "^1.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^24.9.0",
+    "@types/react": "^16.9.17",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "babel-jest": "^24.9.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.5.0",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "sass": "^1.24.4",
+    "typescript": "^3.7.4"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.js?(x)",
+      "**/?(*.)(spec|test).js?(x)",
+      "**/tests.(js|jsx|ts|tsx)",
+      "**/*.tests.(js|jsx|ts|tsx)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.(js|jsx|ts|tsx)"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/jest-setup.js"
+    ],
+    "coverageDirectory": "./coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
+}
