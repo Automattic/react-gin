@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "ESNext"],
+    "emitDeclarationOnly": true,
+    "types": ["react", "jest"],
+    "declarationDir": "./dist",
+    "jsx": "react",
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "node_modules",
+    ".cache",
+    "./dist/**",
+  ]
+}
